@@ -75,6 +75,11 @@
 
 - (void)loadDylibFromBundlebWithPath:(NSURL *)path
 {
+    if (!path.isFileURL) {
+        NSLog(@"is not a file path");
+        return ;
+    }
+    
     NSError *error = nil;
     NSBundle *bundle = [NSBundle bundleWithURL:path];
     if ([bundle loadAndReturnError:&error]) {
