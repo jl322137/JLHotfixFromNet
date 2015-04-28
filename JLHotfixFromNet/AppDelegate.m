@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#import <dlfcn.h>
+#import <mach-o/loader.h>
+#import <mach-o/dyld.h>
+
 @interface AppDelegate ()
 
 @end
@@ -17,29 +21,63 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //lib path, also can download a dylib form net and store in disk
+    NSString *libPath = [NSString stringWithFormat:@"%@/Lib/TestSO.framework",[[NSBundle mainBundle] bundlePath]];
+    //use dlopen to load lib (only 64bit devices iOS7up OK)
+    [self loadDylibFromDlopenWithPath:[libPath stringByAppendingPathComponent:@"TestSO"]];
+    //use bundle to load lib (32bit and 64bit devices iOS7 OK)
+    [self loadDylibFromBundlebWithPath:libPath];
+    //new a class in lib
+    NSObject *test = [NSClassFromString(@"TestClass") new];
+    //call method
+    [test performSelector:NSSelectorFromString(@"showTime")];
+    
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+- (void)loadDylibFromBundlebWithPath:(NSString *)path
+{
+    NSError *error = nil;
+    NSBundle *bundle = [NSBundle bundleWithPath:path];
+    if ([bundle loadAndReturnError:&error]) {
+        NSLog(@"bundle load framework success.");
+    }
+    else {
+        NSLog(@"bundle load framework err:%@",error);
+    }
+    
+    if ([bundle isLoaded]) {
+        NSLog(@"loaded");
+    }
+    
+    [bundle unload];
+    
+    if (![bundle isLoaded]) {
+        NSLog(@"unloaded");
+    }
+    
+    [bundle load];
+    
+    if ([bundle isLoaded]) {
+        NSLog(@"loaded");
+    }
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+- (void)loadDylibFromDlopenWithPath:(NSString *)path
+{
+    void *lib = NULL;
+    lib = dlopen([path cStringUsingEncoding:NSUTF8StringEncoding], RTLD_NOW);
+    if (lib) {
+        NSLog(@"dlopen load framework success.");
+    }
+    else {
+        NSLog(@"dlopen error: %s", dlerror());
+    }
+    
+    dlclose(lib);
+    
+    lib = NULL;
 }
 
 @end

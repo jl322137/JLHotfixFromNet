@@ -1,0 +1,6 @@
+framework module TestSO {
+  umbrella header "TestSO.h"
+
+  export *
+  module * { export * }
+}
