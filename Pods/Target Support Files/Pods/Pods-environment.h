@@ -48,3 +48,9 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 3
 
+// ZipArchive
+#define COCOAPODS_POD_AVAILABLE_ZipArchive
+#define COCOAPODS_VERSION_MAJOR_ZipArchive 1
+#define COCOAPODS_VERSION_MINOR_ZipArchive 4
+#define COCOAPODS_VERSION_PATCH_ZipArchive 0
+
