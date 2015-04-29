@@ -48,6 +48,20 @@
                ReferencedContainer = "container:JLHotfixFromNet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3D7C55791AF06C8D00F26C54"
+               BuildableName = "HostSOTests.xctest"
+               BlueprintName = "HostSOTests"
+               ReferencedContainer = "container:JLHotfixFromNet.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -73,6 +87,16 @@
                BlueprintIdentifier = "3D03D6E91AEFB8B30001551C"
                BuildableName = "TestSOTests.xctest"
                BlueprintName = "TestSOTests"
+               ReferencedContainer = "container:JLHotfixFromNet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3D7C55791AF06C8D00F26C54"
+               BuildableName = "HostSOTests.xctest"
+               BlueprintName = "HostSOTests"
                ReferencedContainer = "container:JLHotfixFromNet.xcodeproj">
             </BuildableReference>
          </TestableReference>

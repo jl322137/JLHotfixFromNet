@@ -12,6 +12,8 @@
 #import <mach-o/loader.h>
 #import <mach-o/dyld.h>
 
+#import "TestObject.h"
+
 #import <AFNetworking.h>
 #import <ZipArchive.h>
 
@@ -26,16 +28,17 @@
     // Override point for customization after application launch.
     
     //lib path, also can download a dylib form net and store in disk
-//    NSURL *libPath = [[NSURL alloc] initFileURLWithPath:[NSString stringWithFormat:@"%@/Lib/TestSO.framework",[[NSBundle mainBundle] bundlePath]] isDirectory:YES];
+    NSURL *libPath = [[NSURL alloc] initFileURLWithPath:[NSString stringWithFormat:@"%@/Lib/TestSO.framework",[[NSBundle mainBundle] bundlePath]] isDirectory:YES];
     //need more test
     //use bundle to load lib (32bit and 64bit devices iOS7 OK, prefer)
-//    [self loadDylibFromDlopenWithPath:[libPath URLByAppendingPathComponent:@"TestSO"]];
+    [self loadDylibFromDlopenWithPath:[libPath URLByAppendingPathComponent:@"TestSO"]];
     //use dlopen to load lib (only 64bit devices iOS7up OK)
 //    [self loadDylibFromBundlebWithPath:libPath];
-    //new a class in lib
-//    NSObject *test = [NSClassFromString(@"TestClass") new];
+    
+    //new a class
+    TestObject *test = [TestObject new];
 //    //call method
-//    [test performSelector:NSSelectorFromString(@"showTime")];
+    [test willCrash];
     
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:nil];
     NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3000/downloadlib/TestSO.framework.zip"]] progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
@@ -60,7 +63,7 @@
                 // 4           
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self loadDylibFromDlopenWithPath:[fileUrl URLByAppendingPathComponent:@"TestSO"]];
-//                    [self loadDylibFromBundlebWithPath:fileUrl];
+                    [self loadDylibFromBundlebWithPath:fileUrl];
                     NSObject *test = [NSClassFromString(@"TestClass") new];
                     [test performSelector:NSSelectorFromString(@"showTime")];
                 });

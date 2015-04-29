@@ -13,38 +13,27 @@
 		3D03D6C11AEFB35E0001551C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D03D6BF1AEFB35E0001551C /* Main.storyboard */; };
 		3D03D6C31AEFB35E0001551C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D03D6C21AEFB35E0001551C /* Images.xcassets */; };
 		3D03D6C61AEFB35E0001551C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D03D6C41AEFB35E0001551C /* LaunchScreen.xib */; };
-		3D03D6D21AEFB35E0001551C /* JLHotfixFromNetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D03D6D11AEFB35E0001551C /* JLHotfixFromNetTests.m */; };
 		3D03D6E51AEFB8B30001551C /* TestSO.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D03D6E41AEFB8B30001551C /* TestSO.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D03D6F41AEFB8B30001551C /* TestSOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D03D6F31AEFB8B30001551C /* TestSOTests.m */; };
-		3D03D7061AEFBD2A0001551C /* TestSO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D03D6E01AEFB8B30001551C /* TestSO.framework */; };
 		3D03D70E1AEFC21F0001551C /* TestClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D03D70C1AEFC21F0001551C /* TestClass.h */; };
 		3D03D70F1AEFC21F0001551C /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D03D70D1AEFC21F0001551C /* TestClass.m */; };
+		3D7C55651AF0672C00F26C54 /* TestObjectFix.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7C55631AF0672C00F26C54 /* TestObjectFix.h */; };
+		3D7C55661AF0672C00F26C54 /* TestObjectFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C55641AF0672C00F26C54 /* TestObjectFix.m */; };
+		3D7C55961AF06CCE00F26C54 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C55951AF06CCE00F26C54 /* TestObject.m */; };
 		72457472E2DFB292865C281E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E5BC8138C195D786C07F81 /* libPods.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3D03D6CC1AEFB35E0001551C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D03D6AA1AEFB35E0001551C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3D03D6B11AEFB35E0001551C;
-			remoteInfo = JLHotfixFromNet;
+/* Begin PBXCopyFilesBuildPhase section */
+		3D7C558C1AF06C8D00F26C54 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D03D6EC1AEFB8B30001551C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D03D6AA1AEFB35E0001551C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3D03D6DF1AEFB8B30001551C;
-			remoteInfo = TestSO;
-		};
-		3D03D6EE1AEFB8B30001551C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D03D6AA1AEFB35E0001551C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3D03D6B11AEFB35E0001551C;
-			remoteInfo = JLHotfixFromNet;
-		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1EA2384E7602965B1A17F729 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -58,18 +47,16 @@
 		3D03D6C01AEFB35E0001551C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D03D6C21AEFB35E0001551C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3D03D6C51AEFB35E0001551C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3D03D6CB1AEFB35E0001551C /* JLHotfixFromNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLHotfixFromNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D03D6D01AEFB35E0001551C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D03D6D11AEFB35E0001551C /* JLHotfixFromNetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLHotfixFromNetTests.m; sourceTree = "<group>"; };
 		3D03D6E01AEFB8B30001551C /* TestSO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestSO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D03D6E31AEFB8B30001551C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D03D6E41AEFB8B30001551C /* TestSO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSO.h; sourceTree = "<group>"; };
-		3D03D6EA1AEFB8B30001551C /* TestSOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D03D6F21AEFB8B30001551C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D03D6F31AEFB8B30001551C /* TestSOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSOTests.m; sourceTree = "<group>"; };
 		3D03D70C1AEFC21F0001551C /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		3D03D70D1AEFC21F0001551C /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		3D03D7101AEFC2D00001551C /* Lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lib; sourceTree = "<group>"; };
+		3D7C55631AF0672C00F26C54 /* TestObjectFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObjectFix.h; sourceTree = "<group>"; };
+		3D7C55641AF0672C00F26C54 /* TestObjectFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObjectFix.m; sourceTree = "<group>"; };
+		3D7C55941AF06CCE00F26C54 /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
+		3D7C55951AF06CCE00F26C54 /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
 		DD358AC9CD04A373595D212D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E5BC8138C195D786C07F81 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,25 +70,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D03D6C81AEFB35E0001551C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3D03D6DC1AEFB8B30001551C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D03D6E71AEFB8B30001551C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D03D7061AEFBD2A0001551C /* TestSO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,9 +94,7 @@
 			children = (
 				3D03D7101AEFC2D00001551C /* Lib */,
 				3D03D6B41AEFB35E0001551C /* JLHotfixFromNet */,
-				3D03D6CE1AEFB35E0001551C /* JLHotfixFromNetTests */,
 				3D03D6E11AEFB8B30001551C /* TestSO */,
-				3D03D6F01AEFB8B30001551C /* TestSOTests */,
 				3D03D6B31AEFB35E0001551C /* Products */,
 				29BACA469E81B3502E75ADFA /* Pods */,
 				C16A5FADC73FA24E368EA226 /* Frameworks */,
@@ -135,9 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				3D03D6B21AEFB35E0001551C /* JLHotfixFromNet.app */,
-				3D03D6CB1AEFB35E0001551C /* JLHotfixFromNetTests.xctest */,
 				3D03D6E01AEFB8B30001551C /* TestSO.framework */,
-				3D03D6EA1AEFB8B30001551C /* TestSOTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +117,8 @@
 				3D03D6BA1AEFB35E0001551C /* AppDelegate.m */,
 				3D03D6BC1AEFB35E0001551C /* ViewController.h */,
 				3D03D6BD1AEFB35E0001551C /* ViewController.m */,
+				3D7C55941AF06CCE00F26C54 /* TestObject.h */,
+				3D7C55951AF06CCE00F26C54 /* TestObject.m */,
 				3D03D6BF1AEFB35E0001551C /* Main.storyboard */,
 				3D03D6C21AEFB35E0001551C /* Images.xcassets */,
 				3D03D6C41AEFB35E0001551C /* LaunchScreen.xib */,
@@ -166,27 +136,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3D03D6CE1AEFB35E0001551C /* JLHotfixFromNetTests */ = {
-			isa = PBXGroup;
-			children = (
-				3D03D6D11AEFB35E0001551C /* JLHotfixFromNetTests.m */,
-				3D03D6CF1AEFB35E0001551C /* Supporting Files */,
-			);
-			path = JLHotfixFromNetTests;
-			sourceTree = "<group>";
-		};
-		3D03D6CF1AEFB35E0001551C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3D03D6D01AEFB35E0001551C /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		3D03D6E11AEFB8B30001551C /* TestSO */ = {
 			isa = PBXGroup;
 			children = (
 				3D03D6E41AEFB8B30001551C /* TestSO.h */,
+				3D7C55631AF0672C00F26C54 /* TestObjectFix.h */,
+				3D7C55641AF0672C00F26C54 /* TestObjectFix.m */,
 				3D03D70C1AEFC21F0001551C /* TestClass.h */,
 				3D03D70D1AEFC21F0001551C /* TestClass.m */,
 				3D03D6E21AEFB8B30001551C /* Supporting Files */,
@@ -198,23 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				3D03D6E31AEFB8B30001551C /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3D03D6F01AEFB8B30001551C /* TestSOTests */ = {
-			isa = PBXGroup;
-			children = (
-				3D03D6F31AEFB8B30001551C /* TestSOTests.m */,
-				3D03D6F11AEFB8B30001551C /* Supporting Files */,
-			);
-			path = TestSOTests;
-			sourceTree = "<group>";
-		};
-		3D03D6F11AEFB8B30001551C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3D03D6F21AEFB8B30001551C /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,6 +172,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7C55651AF0672C00F26C54 /* TestObjectFix.h in Headers */,
 				3D03D6E51AEFB8B30001551C /* TestSO.h in Headers */,
 				3D03D70E1AEFC21F0001551C /* TestClass.h in Headers */,
 			);
@@ -251,6 +190,7 @@
 				3D03D6AF1AEFB35E0001551C /* Frameworks */,
 				3D03D6B01AEFB35E0001551C /* Resources */,
 				C97CAC4CCC0915AE78752609 /* Copy Pods Resources */,
+				3D7C558C1AF06C8D00F26C54 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,24 +200,6 @@
 			productName = JLHotfixFromNet;
 			productReference = 3D03D6B21AEFB35E0001551C /* JLHotfixFromNet.app */;
 			productType = "com.apple.product-type.application";
-		};
-		3D03D6CA1AEFB35E0001551C /* JLHotfixFromNetTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3D03D6D81AEFB35E0001551C /* Build configuration list for PBXNativeTarget "JLHotfixFromNetTests" */;
-			buildPhases = (
-				3D03D6C71AEFB35E0001551C /* Sources */,
-				3D03D6C81AEFB35E0001551C /* Frameworks */,
-				3D03D6C91AEFB35E0001551C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3D03D6CD1AEFB35E0001551C /* PBXTargetDependency */,
-			);
-			name = JLHotfixFromNetTests;
-			productName = JLHotfixFromNetTests;
-			productReference = 3D03D6CB1AEFB35E0001551C /* JLHotfixFromNetTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3D03D6DF1AEFB8B30001551C /* TestSO */ = {
 			isa = PBXNativeTarget;
@@ -297,25 +219,6 @@
 			productReference = 3D03D6E01AEFB8B30001551C /* TestSO.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3D03D6E91AEFB8B30001551C /* TestSOTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3D03D6FF1AEFB8B30001551C /* Build configuration list for PBXNativeTarget "TestSOTests" */;
-			buildPhases = (
-				3D03D6E61AEFB8B30001551C /* Sources */,
-				3D03D6E71AEFB8B30001551C /* Frameworks */,
-				3D03D6E81AEFB8B30001551C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3D03D6ED1AEFB8B30001551C /* PBXTargetDependency */,
-				3D03D6EF1AEFB8B30001551C /* PBXTargetDependency */,
-			);
-			name = TestSOTests;
-			productName = TestSOTests;
-			productReference = 3D03D6EA1AEFB8B30001551C /* TestSOTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -328,16 +231,8 @@
 					3D03D6B11AEFB35E0001551C = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
-					3D03D6CA1AEFB35E0001551C = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 3D03D6B11AEFB35E0001551C;
-					};
 					3D03D6DF1AEFB8B30001551C = {
 						CreatedOnToolsVersion = 6.3.1;
-					};
-					3D03D6E91AEFB8B30001551C = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 3D03D6B11AEFB35E0001551C;
 					};
 				};
 			};
@@ -355,9 +250,7 @@
 			projectRoot = "";
 			targets = (
 				3D03D6B11AEFB35E0001551C /* JLHotfixFromNet */,
-				3D03D6CA1AEFB35E0001551C /* JLHotfixFromNetTests */,
 				3D03D6DF1AEFB8B30001551C /* TestSO */,
-				3D03D6E91AEFB8B30001551C /* TestSOTests */,
 			);
 		};
 /* End PBXProject section */
@@ -373,21 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D03D6C91AEFB35E0001551C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3D03D6DE1AEFB8B30001551C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D03D6E81AEFB8B30001551C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -436,15 +315,8 @@
 			files = (
 				3D03D6BE1AEFB35E0001551C /* ViewController.m in Sources */,
 				3D03D6BB1AEFB35E0001551C /* AppDelegate.m in Sources */,
+				3D7C55961AF06CCE00F26C54 /* TestObject.m in Sources */,
 				3D03D6B81AEFB35E0001551C /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D03D6C71AEFB35E0001551C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D03D6D21AEFB35E0001551C /* JLHotfixFromNetTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,37 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7C55661AF0672C00F26C54 /* TestObjectFix.m in Sources */,
 				3D03D70F1AEFC21F0001551C /* TestClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D03D6E61AEFB8B30001551C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D03D6F41AEFB8B30001551C /* TestSOTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3D03D6CD1AEFB35E0001551C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3D03D6B11AEFB35E0001551C /* JLHotfixFromNet */;
-			targetProxy = 3D03D6CC1AEFB35E0001551C /* PBXContainerItemProxy */;
-		};
-		3D03D6ED1AEFB8B30001551C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3D03D6DF1AEFB8B30001551C /* TestSO */;
-			targetProxy = 3D03D6EC1AEFB8B30001551C /* PBXContainerItemProxy */;
-		};
-		3D03D6EF1AEFB8B30001551C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3D03D6B11AEFB35E0001551C /* JLHotfixFromNet */;
-			targetProxy = 3D03D6EE1AEFB8B30001551C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3D03D6BF1AEFB35E0001551C /* Main.storyboard */ = {
@@ -616,40 +463,6 @@
 			};
 			name = Release;
 		};
-		3D03D6D91AEFB35E0001551C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = JLHotfixFromNetTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLHotfixFromNet.app/JLHotfixFromNet";
-			};
-			name = Debug;
-		};
-		3D03D6DA1AEFB35E0001551C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = JLHotfixFromNetTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLHotfixFromNet.app/JLHotfixFromNet";
-			};
-			name = Release;
-		};
 		3D03D6F91AEFB8B30001551C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -692,38 +505,6 @@
 			};
 			name = Release;
 		};
-		3D03D6FB1AEFB8B30001551C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TestSOTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLHotfixFromNet.app/JLHotfixFromNet";
-			};
-			name = Debug;
-		};
-		3D03D6FC1AEFB8B30001551C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TestSOTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLHotfixFromNet.app/JLHotfixFromNet";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -745,29 +526,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D03D6D81AEFB35E0001551C /* Build configuration list for PBXNativeTarget "JLHotfixFromNetTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3D03D6D91AEFB35E0001551C /* Debug */,
-				3D03D6DA1AEFB35E0001551C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3D03D6FD1AEFB8B30001551C /* Build configuration list for PBXNativeTarget "TestSO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D03D6F91AEFB8B30001551C /* Debug */,
 				3D03D6FA1AEFB8B30001551C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3D03D6FF1AEFB8B30001551C /* Build configuration list for PBXNativeTarget "TestSOTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3D03D6FB1AEFB8B30001551C /* Debug */,
-				3D03D6FC1AEFB8B30001551C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
