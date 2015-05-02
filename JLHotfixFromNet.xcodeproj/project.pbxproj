@@ -16,6 +16,10 @@
 		3D03D6E51AEFB8B30001551C /* TestSO.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D03D6E41AEFB8B30001551C /* TestSO.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D03D70E1AEFC21F0001551C /* TestClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D03D70C1AEFC21F0001551C /* TestClass.h */; };
 		3D03D70F1AEFC21F0001551C /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D03D70D1AEFC21F0001551C /* TestClass.m */; };
+		3D14A6BE1AF3A56F00453420 /* TestVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D14A6BB1AF3A56F00453420 /* TestVC.h */; };
+		3D14A6BF1AF3A56F00453420 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D14A6BC1AF3A56F00453420 /* TestVC.m */; };
+		3D14A6C01AF3A56F00453420 /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D14A6BD1AF3A56F00453420 /* TestVC.xib */; };
+		3D14A6C21AF3AA6300453420 /* Lib in Resources */ = {isa = PBXBuildFile; fileRef = 3D14A6C11AF3AA6300453420 /* Lib */; };
 		3D7C55651AF0672C00F26C54 /* TestObjectFix.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7C55631AF0672C00F26C54 /* TestObjectFix.h */; };
 		3D7C55661AF0672C00F26C54 /* TestObjectFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C55641AF0672C00F26C54 /* TestObjectFix.m */; };
 		3D7C55961AF06CCE00F26C54 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C55951AF06CCE00F26C54 /* TestObject.m */; };
@@ -52,7 +56,10 @@
 		3D03D6E41AEFB8B30001551C /* TestSO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSO.h; sourceTree = "<group>"; };
 		3D03D70C1AEFC21F0001551C /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
 		3D03D70D1AEFC21F0001551C /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
-		3D03D7101AEFC2D00001551C /* Lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lib; sourceTree = "<group>"; };
+		3D14A6BB1AF3A56F00453420 /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		3D14A6BC1AF3A56F00453420 /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
+		3D14A6BD1AF3A56F00453420 /* TestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
+		3D14A6C11AF3AA6300453420 /* Lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lib; sourceTree = "<group>"; };
 		3D7C55631AF0672C00F26C54 /* TestObjectFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObjectFix.h; sourceTree = "<group>"; };
 		3D7C55641AF0672C00F26C54 /* TestObjectFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObjectFix.m; sourceTree = "<group>"; };
 		3D7C55941AF06CCE00F26C54 /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
@@ -92,7 +99,7 @@
 		3D03D6A91AEFB35E0001551C = {
 			isa = PBXGroup;
 			children = (
-				3D03D7101AEFC2D00001551C /* Lib */,
+				3D14A6C11AF3AA6300453420 /* Lib */,
 				3D03D6B41AEFB35E0001551C /* JLHotfixFromNet */,
 				3D03D6E11AEFB8B30001551C /* TestSO */,
 				3D03D6B31AEFB35E0001551C /* Products */,
@@ -142,6 +149,9 @@
 				3D03D6E41AEFB8B30001551C /* TestSO.h */,
 				3D7C55631AF0672C00F26C54 /* TestObjectFix.h */,
 				3D7C55641AF0672C00F26C54 /* TestObjectFix.m */,
+				3D14A6BB1AF3A56F00453420 /* TestVC.h */,
+				3D14A6BC1AF3A56F00453420 /* TestVC.m */,
+				3D14A6BD1AF3A56F00453420 /* TestVC.xib */,
 				3D03D70C1AEFC21F0001551C /* TestClass.h */,
 				3D03D70D1AEFC21F0001551C /* TestClass.m */,
 				3D03D6E21AEFB8B30001551C /* Supporting Files */,
@@ -175,6 +185,7 @@
 				3D7C55651AF0672C00F26C54 /* TestObjectFix.h in Headers */,
 				3D03D6E51AEFB8B30001551C /* TestSO.h in Headers */,
 				3D03D70E1AEFC21F0001551C /* TestClass.h in Headers */,
+				3D14A6BE1AF3A56F00453420 /* TestVC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +273,7 @@
 			files = (
 				3D03D6C11AEFB35E0001551C /* Main.storyboard in Resources */,
 				3D03D6C61AEFB35E0001551C /* LaunchScreen.xib in Resources */,
+				3D14A6C21AF3AA6300453420 /* Lib in Resources */,
 				3D03D6C31AEFB35E0001551C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D14A6C01AF3A56F00453420 /* TestVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D14A6BF1AF3A56F00453420 /* TestVC.m in Sources */,
 				3D7C55661AF0672C00F26C54 /* TestObjectFix.m in Sources */,
 				3D03D70F1AEFC21F0001551C /* TestClass.m in Sources */,
 			);

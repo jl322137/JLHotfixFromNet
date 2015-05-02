@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BA88E992-B197-4CAB-B6F0-27D97B6DE0E2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JLHotfixFromNet</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6FE0726A382EE0B8C64DE088AEE9D81695D049FE</key>
+		<string>https://github.com/jl322137/JLHotfixFromNet.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JLHotfixFromNet.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6FE0726A382EE0B8C64DE088AEE9D81695D049FE</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jl322137/JLHotfixFromNet.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6FE0726A382EE0B8C64DE088AEE9D81695D049FE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6FE0726A382EE0B8C64DE088AEE9D81695D049FE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JLHotfixFromNet</string>
+		</dict>
+	</array>
+</dict>
+</plist>
