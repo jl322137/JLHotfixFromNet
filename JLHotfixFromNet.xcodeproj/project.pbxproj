@@ -23,6 +23,7 @@
 		3D7C55651AF0672C00F26C54 /* TestObjectFix.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7C55631AF0672C00F26C54 /* TestObjectFix.h */; };
 		3D7C55661AF0672C00F26C54 /* TestObjectFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C55641AF0672C00F26C54 /* TestObjectFix.m */; };
 		3D7C55961AF06CCE00F26C54 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7C55951AF06CCE00F26C54 /* TestObject.m */; };
+		3DDBEBC91AF474350093901E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDBEBC81AF474350093901E /* Storyboard.storyboard */; };
 		72457472E2DFB292865C281E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E5BC8138C195D786C07F81 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		3D7C55641AF0672C00F26C54 /* TestObjectFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObjectFix.m; sourceTree = "<group>"; };
 		3D7C55941AF06CCE00F26C54 /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		3D7C55951AF06CCE00F26C54 /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
+		3DDBEBC81AF474350093901E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		DD358AC9CD04A373595D212D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F0E5BC8138C195D786C07F81 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -152,6 +154,7 @@
 				3D14A6BB1AF3A56F00453420 /* TestVC.h */,
 				3D14A6BC1AF3A56F00453420 /* TestVC.m */,
 				3D14A6BD1AF3A56F00453420 /* TestVC.xib */,
+				3DDBEBC81AF474350093901E /* Storyboard.storyboard */,
 				3D03D70C1AEFC21F0001551C /* TestClass.h */,
 				3D03D70D1AEFC21F0001551C /* TestClass.m */,
 				3D03D6E21AEFB8B30001551C /* Supporting Files */,
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D14A6C01AF3A56F00453420 /* TestVC.xib in Resources */,
+				3DDBEBC91AF474350093901E /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

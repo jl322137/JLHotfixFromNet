@@ -19,9 +19,19 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    NSLog(@"load from lib");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onPressedBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

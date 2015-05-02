@@ -33,6 +33,7 @@
         [[NSFileManager defaultManager] removeItemAtURL:downloadURL error:nil];
     }
 
+    //switch to download lib from the network, default copy lib from main bundle for test
     BOOL useNet = NO;
     if (! useNet) {
         //lib path, also can download a dylib form net and store in disk
@@ -56,6 +57,30 @@
     return YES;
 }
 
+- (void)doTest:(NSURL *)fileUrl
+{
+    //fix crash
+    TestObject *test = [TestObject new];
+    [test willCrash];
+
+    //get a new object
+    NSObject *testClass = [NSClassFromString(@"TestClass") new];
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    [testClass performSelector:NSSelectorFromString(@"showTime")];
+#pragma clang diagnostic pop
+
+    //test storyboard
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Storyboard" bundle:[NSBundle bundleWithURL:fileUrl]];
+    UIViewController *testStoryboardVC = [sb instantiateInitialViewController];
+    [self.window.rootViewController presentViewController:testStoryboardVC animated:YES completion:nil];
+
+    //get a new vc with res
+    UIViewController *testVC = [[NSClassFromString(@"TestVC") alloc] initWithNibName:@"TestVC" bundle:[NSBundle bundleWithURL:fileUrl]];
+    [testStoryboardVC presentViewController:testVC animated:YES completion:nil];
+}
+
 - (void)unzipAndLoadLib:(NSURL *)filePath
 {
     ZipArchive *za = [[ZipArchive alloc] init];
@@ -74,12 +99,15 @@
 
         // 4
         dispatch_async(dispatch_get_main_queue(), ^{
+
+            //use dlopen to load lib
             [self loadDylibFromDlopenWithPath:[fileUrl URLByAppendingPathComponent:@"TestSO"]];
+
+            //use bundle to load lib
             [self loadDylibFromBundlebWithPath:fileUrl];
-            TestObject *test = [TestObject new];
-            [test willCrash];
-            NSObject *testClass = [NSClassFromString(@"TestClass") new];
-            [testClass performSelector:NSSelectorFromString(@"showTime")];
+
+            //test
+            [self doTest:fileUrl];
         });
     }
 }
