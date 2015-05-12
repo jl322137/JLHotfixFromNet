@@ -27,19 +27,6 @@
 		72457472E2DFB292865C281E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E5BC8138C195D786C07F81 /* libPods.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		3D7C558C1AF06C8D00F26C54 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		1EA2384E7602965B1A17F729 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3D03D6B21AEFB35E0001551C /* JLHotfixFromNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLHotfixFromNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,7 +191,6 @@
 				3D03D6AF1AEFB35E0001551C /* Frameworks */,
 				3D03D6B01AEFB35E0001551C /* Resources */,
 				C97CAC4CCC0915AE78752609 /* Copy Pods Resources */,
-				3D7C558C1AF06C8D00F26C54 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,9 +230,11 @@
 				TargetAttributes = {
 					3D03D6B11AEFB35E0001551C = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = H563K59824;
 					};
 					3D03D6DF1AEFB8B30001551C = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = H563K59824;
 					};
 				};
 			};
@@ -454,6 +442,7 @@
 			baseConfigurationReference = DD358AC9CD04A373595D212D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lib",
@@ -470,6 +459,7 @@
 			baseConfigurationReference = 1EA2384E7602965B1A17F729 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: New Height (shanghai) Co., Ltd (H563K59824)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lib",
@@ -484,6 +474,7 @@
 		3D03D6F91AEFB8B30001551C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -507,6 +498,8 @@
 		3D03D6FA1AEFB8B30001551C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: New Height (shanghai) Co., Ltd (H563K59824)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: New Height (shanghai) Co., Ltd (H563K59824)";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

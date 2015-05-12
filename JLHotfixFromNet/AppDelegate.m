@@ -27,27 +27,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    NSURL *downloadURL = [[NSFileManager defaultManager] URLForDirectory:NSLibraryDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-    downloadURL = [downloadURL URLByAppendingPathComponent:@"TestSO.framework.zip"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:downloadURL.relativePath]) {
-        [[NSFileManager defaultManager] removeItemAtURL:downloadURL error:nil];
-    }
+    NSString *downloadString = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/TestSO.framework.zip"];
+    [[NSFileManager defaultManager] removeItemAtPath:downloadString error:nil];
 
     //switch to download lib from the network, default copy lib from main bundle for test
     BOOL useNet = NO;
     if (! useNet) {
         //lib path, also can download a dylib form net and store in disk
-        NSURL *libPath = [[NSURL alloc] initFileURLWithPath:[NSString stringWithFormat:@"%@/Lib/TestSO.framework.zip",[[NSBundle mainBundle] bundlePath]] isDirectory:NO];
-        [[NSFileManager defaultManager] copyItemAtURL:libPath toURL:downloadURL error:nil];
-        [self unzipAndLoadLib:downloadURL];
+        [[NSFileManager defaultManager] copyItemAtPath:[NSString stringWithFormat:@"%@/Lib/TestSO.framework.zip",[[NSBundle mainBundle] bundlePath]] toPath:downloadString error:nil];
+        [self unzipAndLoadLib:downloadString];
     }
     else {
         AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:nil];
         NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3000/downloadlib/TestSO.framework.zip"]] progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-            return downloadURL;
+            return [NSURL URLWithString:downloadString];
         } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
             if (!error && filePath) {
-                [self unzipAndLoadLib:filePath];
+                [self unzipAndLoadLib:filePath.relativePath];
             }
         }];
         
@@ -81,11 +77,11 @@
     [testStoryboardVC presentViewController:testVC animated:YES completion:nil];
 }
 
-- (void)unzipAndLoadLib:(NSURL *)filePath
+- (void)unzipAndLoadLib:(NSString *)filePath
 {
     ZipArchive *za = [[ZipArchive alloc] init];
     // 1
-    if ([za UnzipOpenFile:filePath.relativePath]) {
+    if ([za UnzipOpenFile:filePath]) {
         // 2
         BOOL ret = [za UnzipFileTo:[[NSFileManager defaultManager] URLForDirectory:NSLibraryDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil].relativePath overWrite: YES];
         if (NO == ret){
@@ -95,7 +91,7 @@
         [za UnzipCloseFile];
 
         // 3
-        NSURL *fileUrl = [[NSURL alloc] initFileURLWithPath:[filePath.relativePath substringToIndex:filePath.relativePath.length - 4] isDirectory:YES];
+        NSURL *fileUrl = [[NSURL alloc] initFileURLWithPath:[filePath substringToIndex:filePath.length - 4] isDirectory:YES];
 
         // 4
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -148,7 +144,7 @@
 - (void)loadDylibFromDlopenWithPath:(NSURL *)path
 {
     void *lib = NULL;
-    lib = dlopen([path.absoluteString cStringUsingEncoding:NSUTF8StringEncoding], RTLD_NOW);
+    lib = dlopen([path.relativePath cStringUsingEncoding:NSUTF8StringEncoding], RTLD_NOW);
     if (lib) {
         NSLog(@"dlopen load framework success.");
     }
