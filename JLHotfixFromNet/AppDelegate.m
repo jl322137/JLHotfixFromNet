@@ -70,11 +70,12 @@
     //test storyboard
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Storyboard" bundle:[NSBundle bundleWithURL:fileUrl]];
     UIViewController *testStoryboardVC = [sb instantiateInitialViewController];
-    [self.window.rootViewController presentViewController:testStoryboardVC animated:YES completion:nil];
-
-    //get a new vc with res
-    UIViewController *testVC = [[NSClassFromString(@"TestVC") alloc] initWithNibName:@"TestVC" bundle:[NSBundle bundleWithURL:fileUrl]];
-    [testStoryboardVC presentViewController:testVC animated:YES completion:nil];
+    [self.window.rootViewController presentViewController:testStoryboardVC animated:YES completion:^{
+        
+        //get a new vc with res
+        UIViewController *testVC = [[NSClassFromString(@"TestVC") alloc] initWithNibName:@"TestVC" bundle:[NSBundle bundleWithURL:fileUrl]];
+        [testStoryboardVC presentViewController:testVC animated:YES completion:nil];
+    }];
 }
 
 - (void)unzipAndLoadLib:(NSString *)filePath
